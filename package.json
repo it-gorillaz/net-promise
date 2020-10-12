@@ -1,0 +1,25 @@
+{
+  "name": "net-promise",
+  "version": "1.0.0",
+  "description": "Simplet net.Socket Wrapper for Async/Await",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/it-gorillaz/net-promise.git"
+  },
+  "keywords": [
+    "net",
+    "socket",
+    "async",
+    "await"
+  ],
+  "author": "Tom Melo <tom@itgorillaz.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/it-gorillaz/net-promise/issues"
+  },
+  "homepage": "https://github.com/it-gorillaz/net-promise#readme"
+}
