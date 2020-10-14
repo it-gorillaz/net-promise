@@ -15,9 +15,10 @@ const { Socket, SocketError, SocketErrorType } = require("net-promise");
 
 const ping = async() => {
 
+  let socket;
   try {
 
-    const socket = await Socket({ host: 'localhost', port: 3000 });
+    socket = await Socket({ host: 'localhost', port: 3000 });
 
     await socket.write("ping");
 
@@ -36,6 +37,8 @@ const ping = async() => {
       console.log(e.type)
     }
 
+  } finally {
+    if (socket) socket.close();
   }
 
 }
@@ -46,9 +49,10 @@ const { Socket, SocketError, SocketErrorType } = require("net-promise");
 
 const ping = async() => {
 
+  let socket;
   try {
 
-    const socket = await Socket({ host: 'localhost', port: 3000, timeout: 5 });
+    socket = await Socket({ host: 'localhost', port: 3000, timeout: 5 });
     
     await socket.recv();
     
@@ -58,12 +62,13 @@ const ping = async() => {
       console.log(e.type) // TIMEOUT
     }
 
+  } finally {
+    if (socket) socket.close();
   }
 
 }
 ```
 ### Custom Message Handler
-You can specify your own message handler:
 ```
 const { Socket, SocketError, SocketErrorType } = require("net-promise");
 
@@ -81,9 +86,10 @@ const ping = async() => {
     }
   }
 
+  let socket;
   try {
 
-    const socket = await Socket({ host: 'localhost', port: 3000 }, myOwnMessageHandler);
+    socket = await Socket({ host: 'localhost', port: 3000 }, myOwnMessageHandler);
     
     const message = await socket.recv();
     console.log(message);
@@ -94,6 +100,8 @@ const ping = async() => {
       console.log(e.type)
     }
 
+  } finally {
+    if (socket) socket.close();
   }
 
 }
