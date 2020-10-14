@@ -10,7 +10,7 @@ npm install --save net-promise
 
 ### Basic Usage
 The default message handler processes string messages and waits for a message ending with the character ```\n``` to fulfil the promise.
-```
+```javascript
 const { Socket, SocketError, SocketErrorType } = require("net-promise");
 
 const ping = async() => {
@@ -44,7 +44,7 @@ const ping = async() => {
 }
 ```
 ### Idle Timeout
-```
+```javascript
 const { Socket, SocketError, SocketErrorType } = require("net-promise");
 
 const ping = async() => {
@@ -69,7 +69,7 @@ const ping = async() => {
 }
 ```
 ### Custom Message Handler
-```
+```javascript
 const { Socket, SocketError, SocketErrorType } = require("net-promise");
 
 const ping = async() => {
