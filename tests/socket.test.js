@@ -142,7 +142,6 @@ describe("Socket", () => {
         expect("test message").to.be.equals(message);
         
       } catch (e) {        
-        console.error(e);
         expect(true).to.be.equals(false);
       }
 
