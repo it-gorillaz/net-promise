@@ -1,0 +1,42 @@
+{
+  "name": "net-promise",
+  "version": "1.0.0",
+  "description": "Simple net.Socket promise wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha 'tests/**/*test.js'",
+    "coverage": "nyc --reporter html --reporter text npm test"
+  },
+  "nyc": {
+    "all": false,
+    "check-coverage": true,
+    "excludeNodeModules": true,
+    "branches": 80,
+    "lines": 80,
+    "functions": 80,
+    "statements": 80,
+    "exclude": []
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/it-gorillaz/net-promise.git"
+  },
+  "keywords": [
+    "net",
+    "socket",
+    "async",
+    "await"
+  ],
+  "author": "Tom Melo <tom@itgorillaz.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/it-gorillaz/net-promise/issues"
+  },
+  "homepage": "https://github.com/it-gorillaz/net-promise#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.0"
+  }
+}
