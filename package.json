@@ -1,7 +1,7 @@
 {
   "name": "net-promise",
   "version": "1.0.0",
-  "description": "Simplet net.Socket Wrapper for Async/Await",
+  "description": "Simple net.Socket promise wrapper",
   "main": "index.js",
   "scripts": {
     "test": "mocha 'tests/**/*test.js'",
